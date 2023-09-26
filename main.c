@@ -6,10 +6,10 @@ Integrantes
 */
 
 
-#include <pthread.h>
-#include <semaphore.h>
-#include <stdio.h>
-#include <unistd.h>
+#include <pthread.h> // usada para criar uma thread para cada filósofo, passando o seu identificador como parâmetro, e para esperar que todas as threads terminem.
+#include <semaphore.h> //  usada para criar um semáforo mutex para controlar o acesso à função de pegar ou soltar os garfos, e um vetor de semáforos para controlar o comportamento de cada filósofo.
+#include <stdio.h> // usada para imprimir mensagens indicando o estado e as ações dos filósofos
+#include <unistd.h> // usada para fornecer a função sleep, que faz a thread esperar por um tempo determinado em segundos.
 
 #define NUM_PHILOSOPHERS 5 // número de filósofos
 #define THINKING 2 // estado de pensando
